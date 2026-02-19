@@ -1,0 +1,7 @@
+project_id = "coinhabit-local"
+
+[functions.process-checkin]
+verify_jwt = true
+
+[functions.process-deposit]
+verify_jwt = true
