@@ -25,6 +25,7 @@ class ProfileScreen extends ConsumerStatefulWidget {
 
 class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   static const _githubUsername = 'YUVRAJ-SINGH-3178';
+  static const _githubRepo = 'CoinHabit-';
 
   bool _isUploadingAvatar = false;
   bool _isUpdatingReminder = false;
@@ -206,7 +207,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
     final issueUri = Uri.https(
       'github.com',
-      '$_githubUsername/version/issues/new',
+      '$_githubUsername/$_githubRepo/issues/new',
       {
         'title': issueTitle,
         'body': issueBody,
@@ -502,10 +503,11 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       ListTile(
                         leading: const Icon(Icons.support_agent_rounded),
                         title: const Text('Support (GitHub)'),
-                        subtitle: const Text('@YUVRAJ-SINGH-3178'),
+                        subtitle: const Text('@YUVRAJ-SINGH-3178/CoinHabit-'),
                         trailing: const Icon(Icons.open_in_new_rounded),
-                        onTap: () =>
-                            _openUrl('https://github.com/$_githubUsername'),
+                        onTap: () => _openUrl(
+                          'https://github.com/$_githubUsername/$_githubRepo',
+                        ),
                       ),
                       const Divider(height: 1),
                       ListTile(
